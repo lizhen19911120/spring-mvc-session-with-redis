@@ -1,10 +1,3 @@
-# spring mvc
-使用spring mvc的配置连接redis实现不同tomcat服务器之间的session共享，对照redis项目com.fei包
-具体代码逻辑参考：
-<br> RedisHttpSessionConfiguration public RedisOperationsSessionRepository sessionRepository()
-<br> SpringHttpSessionConfiguration public <S extends Session> SessionRepositoryFilter<? extends Session> springSessionRepositoryFilter(SessionRepository<S> sessionRepository)
-<br> SessionRepositoryFilter
-
 1、在maven项目pom.xml中添加如下依赖
 注意：如果不添加commons-fileupload依赖，项目将会报java.lang.NoClassDefFoundError: org/apache/commons/fileupload/FileItemFactory错误
 
@@ -61,7 +54,7 @@
         <filter-name>springSessionRepositoryFilter</filter-name>
         <url-pattern>/*</url-pattern>
       </filter-mapping>
-
+           
 # spring和web容器整合之DelegatingFilterProxy理解
 
 一般的filter是那些实现了javax.servlet.filter接口的实现类，写在web.xml中供web容器加载创建实例使用。
@@ -73,5 +66,10 @@
 <br>            AbstractSecurityWebApplicationInitializer insertSpringSecurityFilterChain(ServletContext servletContext)
 <br>            WebSecurity
                 
-
+# spring mvc
+使用spring mvc的配置连接redis实现不同tomcat服务器之间的session共享，对照redis项目com.fei包
+具体代码逻辑参考：
+<br> RedisHttpSessionConfiguration public RedisOperationsSessionRepository sessionRepository()
+<br> SpringHttpSessionConfiguration public <<S extends Session> SessionRepositoryFilter<? extends Session> springSessionRepositoryFilter(SessionRepository<S> sessionRepository)
+<br> SessionRepositoryFilter
 
