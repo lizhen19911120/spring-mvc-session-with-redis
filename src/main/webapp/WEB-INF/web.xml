@@ -37,7 +37,7 @@
     </mime-mapping>
 
     <filter>
-        <!-- 实现session管理的spring容器的filter——SessionRepositoryFilter默认名字是springSessionRepositoryFilter -->
+        <!-- 实现基于redis的session管理的spring容器的filter——SessionRepositoryFilter默认名字是springSessionRepositoryFilter -->
         <filter-name>springSessionRepositoryFilter</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
         <init-param>
