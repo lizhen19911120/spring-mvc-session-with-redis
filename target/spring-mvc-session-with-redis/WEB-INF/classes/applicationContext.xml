@@ -29,5 +29,5 @@
     <aop:aspectj-autoproxy proxy-target-class="false"/>
     <bean id="myFilter" class="cn.kiiwii.framework.filter.MyFilter"></bean>
 
-    <import resource="redis/spring-redis.xml"/>
+    <!--<import resource="redis/spring-redis.xml"/>-->
 </beans>

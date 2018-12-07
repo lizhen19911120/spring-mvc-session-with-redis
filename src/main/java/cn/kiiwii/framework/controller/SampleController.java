@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -39,6 +40,7 @@ public class SampleController {
 
         return "index";
     }
+
     @RequestMapping("/seto")
     public String setObject(HttpServletRequest request, HttpServletResponse response){
 
@@ -76,6 +78,14 @@ public class SampleController {
             logger.info("设置了session-list 的值");
         }
         return "index";
+    }
+
+
+    @ResponseBody
+    @RequestMapping("/setx")
+    public String set(HttpServletRequest request, HttpServletResponse response){
+
+        return "{'code':'000000','body':'love'}";
     }
 
 }
